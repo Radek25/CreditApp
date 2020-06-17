@@ -8,25 +8,25 @@ namespace Program
         public static void RunLogic(int number, List<Persons> person){
             switch (number)
                 {
-                    case 1:
+                    case (int)DebtorUtils.DebtorSwitchEnum.ADD_DEBTOR:
                         DebtorLogic.AddNewPerson(person);
                         DebtorLogic.ShowAllPerson(person);
                         break;
-                    case 2:
+                    case (int)DebtorUtils.DebtorSwitchEnum.EDIT_DEBTOR:
                         DebtorLogic.ShowAllPerson(person);
                         DebtorLogic.EditPerson(person);
                         break;
-                    case 3:
+                    case (int)DebtorUtils.DebtorSwitchEnum.REMOVE_DEBTOR:
                         DebtorLogic.ShowAllPerson(person);
                         DebtorLogic.RemovePerson(person);
                         break;
-                    case 4:
+                    case (int)DebtorUtils.DebtorSwitchEnum.SHOW_ALL_DEBTORS:
                         DebtorLogic.ShowAllPerson(person);
                         break;
-                    case 5:
+                    case (int)DebtorUtils.DebtorSwitchEnum.SHOW_ALL_MONEY:
                         DebtorLogic.ShowAllMoney(person);
                         break;
-                    case 6:
+                    case (int)DebtorUtils.DebtorSwitchEnum.EXIT:
                         Environment.Exit(0);
                         break;
                     default:
