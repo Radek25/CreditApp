@@ -67,7 +67,7 @@ namespace Program
         }
         public static void RemovePerson(List<Persons> person)
         {
-            Console.Write("Podja numer dłużnika, którego chcesz usunąć: ");
+            Console.Write("Podaj numer dłużnika, którego chcesz usunąć: ");
             int code = int.Parse(Console.ReadLine());
             try
             {
@@ -82,14 +82,9 @@ namespace Program
 
         public static void ShowAllMoney(List<Persons> person) 
         {
-            double sum = 0;
-            foreach (Persons debtor in person)
-            {
-                sum += debtor.Money;
-            }
             Console.WriteLine("");
-            Console.WriteLine($"Suma pożyczek: {sum}"); //Suma wszystkich długów
-            Console.WriteLine($"Suma pożyczek z procentem: {PercentFunction(person)}");
+            Console.WriteLine($"Suma pożyczek: {DebtorUtils.GetMoneyWithoutPercent(person)}"); //Suma wszystkich długów
+            Console.WriteLine($"Suma pożyczek z procentem: {DebtorUtils.GetMoneyWithPercent(person)}");
             Console.WriteLine("");
         }
 
@@ -98,16 +93,6 @@ namespace Program
             Console.WriteLine("");
             Console.WriteLine(message);
             Console.WriteLine("");
-        }
-        private static double PercentFunction(List<Persons> person)
-        {
-            double sum = 0;
-            foreach (Persons debtor in person)
-            {
-                sum += debtor.Money + debtor.Money * (debtor.Percent / 100);
-            }
-
-            return sum;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Program
             Console.WriteLine("Witaj!");
             while (true)
             {
+                Console.WriteLine(""); 
                 Console.WriteLine("Wybierz operacje z listy:");
                 Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.ADD_DEBTOR} --> Dodaj dłużnika");
                 Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.EDIT_DEBTOR} --> Modyfikuj dłużnika");
