@@ -5,7 +5,7 @@ namespace Program
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) //Interface aplikacji
         {
             var person = new List<Persons>();
             Console.WriteLine("Witaj!");
@@ -13,7 +13,7 @@ namespace Program
             {
                 Console.WriteLine(""); 
                 Console.WriteLine("Wybierz operacje z listy:");
-                Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.ADD_DEBTOR} --> Dodaj dłużnika");
+                Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.ADD_DEBTOR} --> Dodaj dłużnika"); //Korzystając z enum obsługujemy interface
                 Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.EDIT_DEBTOR} --> Modyfikuj dłużnika");
                 Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.REMOVE_DEBTOR} --> Usuń dłużnika");
                 Console.WriteLine($"{(int)DebtorUtils.DebtorSwitchEnum.SHOW_ALL_DEBTORS} --> Wyświetl wszystkich dłużników");
